@@ -1,13 +1,171 @@
 body {
-    background-color: greenyellow;
-}
-p.style1 {
-    color: rgb(59, 10, 10);
-    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/3.jpg');    /* 修正路径 */
+    background-size: cover;                /* 让图片覆盖整个屏幕 */
+    background-position: center;           /* 居中显示图片 */
+    background-repeat: no-repeat;          /* 防止图片重复 */
+    background-attachment: fixed;          /* 背景固定，页面滚动时不会移动 */
+    font-family: Arial, sans-serif;        /* 设置字体 */
+    color: white;                          /* 设置文字颜色，确保与背景对比明显 */
+    text-align: center;                    /* 居中文本 */
+    padding: 50px;
 }
 
-p.style2 {
-    font-family: Arial, sans-serif;
-    color : rgba(0, 0, 0, 0.737);
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);  /* 半透明黑色遮罩 */
+    z-index: -1;                      /* 保证遮罩在文字下方 */
+    background-position: center;
+}
+
+
+body {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 64rem;
+  }
+  
+  header {
+    border-top: 0px;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  a.nav-title,
+  a.nav-title:visited {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    font-weight: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 80rem;
+  }
+
+  .arrow-down {
+    display: inline-block;               /* 让箭头成为内联块，方便居中 */
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent; /* 左边透明 */
+    border-right: 30px solid transparent;/* 右边透明 */
+    border-top: 20px solid rgb(255, 255, 255);        /* 上边黑色，形成向下箭头 */
+    cursor: pointer;                     /* 鼠标悬停时变成点击样式 */
+    margin-top: 10px;                    /* 与顶部保持距离 */
+    transition: transform 0.3s ease;     /* 悬停平滑效果 */
+}
+
+/* 悬停时微动效果 */
+.arrow-down:hover {
+    transform: translateY(px);  /* 悬停时箭头下移 5 像素 */
+}
+
+  
+.extra-space1 {
+    margin-top: 40px;  /* 增加与上一个段落的间距 */
+    margin-bottom: 40px;  /* 与下一个段落的间距较小 */
+}
+
+.extra-space2 {
+    margin-top: 40px;  /* 增加与上一个段落的间距 */
+    margin-bottom: 100px;  /* 与下一个段落的间距较小 */
+}
+
+
+  section#about{
+    padding-bottom: 1rem;
+  }
+  
+  #about p {
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
     font-size: 20px;
+    line-height: 3rem;
+  }
+  
+  #about a,
+  a:visited {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom:1px solid;
+    border-color: #ffffff;
+  }
+  
+  #assignments h2 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  p.assignment-title {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  p.assignment-title a,
+  a:visited {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid;
+    border-color: #ffffff;
+  }
+  
+  p.assignment-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin-top: 0;
+  }
+  
+  img.assignment-thumbnail {
+    margin-bottom: 0.5rem;
+    max-width: 30%;
+  }
+  
+  footer {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #aaa;
+  }
+  
+  p.footer-text {
+    font-family: 'Source Code Pro', monospace;
+    font-size: .75rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  footer a,
+  a:visited {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid;
+    border-color: #ffffff;
+  }
+  
+  #map {
+    width: 100%;
+    height: 800px;
+    margin: 1em auto;
+  }
+
+#map{
+    height: 800px;
+    width: 60%;
+    margin: 5em auto;
 }
