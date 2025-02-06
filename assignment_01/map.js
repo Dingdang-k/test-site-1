@@ -1,7 +1,7 @@
-mapboxgl.accessToken = 'mapbox://styles/dingdangk/cm6jlzcad005a01s703js1n6p';
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGFveXVhbmt1YW5nIiwiYSI6ImNtNnNuanc1YTA5a3IybXE2MmtpZXV0Y3IifQ.LhGQjYr4z4LnSjaDCSPtLg';
 const map = new mapboxgl.Map({
-    container: 'map', 
-    style: 'pk.eyJ1IjoiZGluZ2RhbmdrIiwiYSI6ImNrN21ub3pjMDA1c2Qza3BjMmRhdHlrZmEifQ.u1B-kKPnFowpPK_7mCYy_g', 
-    center: [-74.000,43.000],
-    zoom: 10
+    container: 'map',
+    style: 'mapbox://styles/haoyuankuang/cm6sl8xi0016h01ry70s211rw',
+    zoom: 15.65,
+    center: [-73.843, 40.746]
 });

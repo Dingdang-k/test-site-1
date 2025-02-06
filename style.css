@@ -1,3 +1,12 @@
+/* 清除浏览器默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* 让宽高计算更直观 */
+}
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -53,8 +62,8 @@ body {
     display: inline-block;               /* 让箭头成为内联块，方便居中 */
     width: 0;
     height: 0;
-    border-left: 30px solid transparent; /* 左边透明 */
-    border-right: 30px solid transparent;/* 右边透明 */
+    border-left: 20px solid transparent; /* 左边透明 */
+    border-right: 20px solid transparent;/* 右边透明 */
     border-top: 20px solid rgb(255, 255, 255);        /* 上边黑色，形成向下箭头 */
     cursor: pointer;                     /* 鼠标悬停时变成点击样式 */
     margin-top: 10px;                    /* 与顶部保持距离 */
@@ -63,7 +72,7 @@ body {
 
 /* 悬停时微动效果 */
 .arrow-down:hover {
-    transform: translateY(px);  /* 悬停时箭头下移 5 像素 */
+    transform: translateY(5px);  /* 悬停时箭头下移 5 像素 */
 }
 
   
@@ -90,24 +99,36 @@ body {
     line-height: 3rem;
   }
   
+
   #about a,
   a:visited {
     text-decoration: none;
     color: rgb(255, 255, 255);
     border-bottom:1px solid;
     border-color: #ffffff;
+
+  }
+
+  .content-text2 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
+    text-align: justify;
   }
   
   #assignments h2 {
     font-family: 'Source Code Pro', monospace;
-    font-size: 16px;
+    font-size: 30px;
     text-transform: uppercase;
     font-weight: 600;
   }
   
   p.assignment-title {
     font-family: 'Source Code Pro', monospace;
-    font-size: 14px;
+    font-size: px;
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 0;
@@ -131,9 +152,14 @@ body {
   }
   
   img.assignment-thumbnail {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     max-width: 30%;
+    transition: transform 0.3s ease;
   }
+
+  img.assignment-thumbnail:hover {
+    transform: scale(1.1);  /* 悬停时放大 1.1 倍 */
+}
   
   footer {
     margin-right: auto;
@@ -158,14 +184,36 @@ body {
     border-color: #ffffff;
   }
   
-  #map {
-    width: 100%;
-    height: 800px;
-    margin: 1em auto;
+
+
+
+  .mapboxtest {
+    width: 900px;
+    height: auto;
+    transition: transform 0.6s ease;  /* 平滑过渡效果 */
+}
+
+.mapboxtest:hover {
+    transform: scale(1.1);  /* 悬停时放大 1.1 倍 */
+}
+
+
+
+
+a.second-title,
+a.second-title:visited {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2em;
+    font-weight: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 5rem;
   }
 
-#map{
-    height: 800px;
-    width: 60%;
-    margin: 5em auto;
-}
+  
+
+#map {
+    width: 100%;
+    height: 1000px;
+    margin: 1em auto;
+  }
