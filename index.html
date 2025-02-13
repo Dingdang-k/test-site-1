@@ -8,8 +8,10 @@
       name="keywords"
       content="mapping, storytelling, urban design, new york"
     />
-    <title>Haoyuan Kuang</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Demo Personal Site</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,127 +20,47 @@
     />
   </head>
   <body>
-    <a href="https://dingdang-k.github.io/test-site-1/"><header>
+
+    <header>
       <a
-        class="nav-title"
+        class="second-title"
+        href="../index.html"
         > - Haoyuan Kuang ( KONG ) - </a
       >
-      <p><div class ="arrow-down"></div></p>
-    </header></a>. 
-    
-    <main>
-      <section id="about">
-        <p>>>> This is Haoyuan Kuang ( KONG ) aka Dingdang·K <<<</p>
-        <p>
-          A little Dreamer, focusing on Architecture, Urban Design, installation art and photography at Cornell University.
-        </p>
-
-        <p class="extra-space1"> 
-   
-        </p>
-
-        <p>
-          <a href="https://www.instagram.com/haoyuan_kuang/" target="_blank">
-            <img
-            class="assignment-thumbnail"
-            src="./img/3.5.jpg"
-            alt="Thumbnail image for assignment 1" >
-            <img
-            class="assignment-thumbnail"
-            src="./img/3.6.jpg"
-            alt="Thumbnail image for assignment 1" >
-            <img
-            class="assignment-thumbnail"
-            src="./img/3.4.jpg"
-            alt="Thumbnail image for assignment 1" >
-          </a>
-        <p>
-          <a href="https://www.instagram.com/haoyuan_kuang/" target="_blank">>>> DESIGN on INSTAGRAM</a>
-        </p>
-
-<p class="extra-space2"> 
-   
-</p>
-
-        <p>
-          <a href="https://www.instagram.com/peotry_of_the_shihua_hill/" target="_blank">
-            <img
-            class="assignment-thumbnail"
-            src="./img/3.3.jpg"
-            alt="Thumbnail image for assignment 1" >
-            <img
-            class="assignment-thumbnail"
-            src="./img/3.1.jpg"
-            alt="Thumbnail image for assignment 1" >
-            <img
-            class="assignment-thumbnail"
-            src="./img/3.2.jpg"
-            alt="Thumbnail image for assignment 1" >
-          </a>
-        </p>
-
-        <p>
-          <a href="https://www.instagram.com/peotry_of_the_shihua_hill/" target="_blank">>>> PHTOGRAPHY on INSTAGRAM</a>.
-        </p>
-
-        <p class="extra-space2"> 
-   
-        </p>
+    </header>
 
 
-
-      </section>
-
-
-      <p class="content-text2">
-        "Balance in dynamics, burst in silence, grow in timeheal in atmosphere", these are my impression of the Architecture. 
-        Throughout the course of history, 
-        architecture and Urban emerges from our collective essence ancresponds to our existence, 
-        not only offering us: place to play, but also affecting our spirit, 
-        to evokepassion, to heal or instill fear, 
-        the artistry lies morein the emotional response it exerts. 
-        This is exactlythe unique charm of architecture, and this is why lam fascinated by it.
-      </p>
-
-      <p class="extra-space2"> 
-
-      <section id="assignments">
-        <h2>- Greenery of New York City -</h2>
-
-        <p><div class ="arrow-down"></div></p>
-
-        <p class="extra-space2"> 
-        <div class="assignment">
-
-          <p class="mapbox-title">
-            <a href="./assignment_02/index.html"
-              ><img
-              class="mapboxtest"
-              src="./assignment_01/mapbox_cover_test.png"
-              alt="Thumbnail image for assignment 1"
-            /></a
-            >
-          </p>
-
-
-          <p class="extra-space2"> 
-
-          <p class="mapbox-title">
-            <a href="./assignment_02/index.html"
-              >Assignment 2 - Mapbox Base Maps test</a
-            >
-          </p>
-
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p class="footer-text">
-        Send me a <a href="mailto:dd1102714218@gmail.com">message</a> or visit
-        <a href="https://dingdang-k.github.io/test-site-1/">my site</a>. |
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
-      </p>
-    </footer>
-    
+    <body>
+      <nav id="menu"></nav>
+      <div id='map'></div>
+      <div id='title' class="title">
+          <h1>JUST JOINT EVERYTHING TOGETHER<br><br> TESTING</h1>
+          <p>Greenery in New York City is a precious resource. It is a vital component of the urban environment, providing shade, reducing the urban heat island effect, and improving air quality. In this map, I have highlighted the areas in New York City with the highest concentration of green spaces. These areas are essential for the health and well-being of city residents, and they play a crucial role in creating a more sustainable and livable urban environment.</p>
+          <hr>
+          <div id="turnstile-legend" class="legend2">
+              <h4>Drop in Ridership</h4>
+              <p><em>Click on stations for detailed turnstile usage</em></p>
+              <div><span style="background-color: #fef0d3"></span>&#8594;<span style="background-color: #247200; height:20px; width:20px"></span> < 50% decrease to > 90% decrease</div>
+          </div>
+          <div id="income-legend" class="legend">
+              <h4>Median Household Income</h4>
+              <div><span style="background-color: #6bcf52"></span>Greenery space</div>
+              <div><span style="background-color: #a18700"></span>1.4mile walk to park service area</div>
+          </div>
+          <div><span style="background-color: #00729f; height:6px; width:6px"></span>      bycyle parking points</div>
+      </div>
+      <script type='text/javascript' src="map.js"></script>
   </body>
+
+  <footer>
+    <p class="footer-text">
+      Send me a <a href="mailto:dd1102714218@gmail.com">message</a> or visit
+      <a href="https://dingdang-k.github.io/test-site-1/">my site</a>. |
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    </p>
+  </footer>
+  
+  </body>
+
+
 </html>
