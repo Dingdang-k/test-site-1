@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Juan Francisco Saldarriaga" />
+    <meta
+      name="keywords"
+      content="mapping, storytelling, urban design, new york"
+    />
+    <title>Demo Personal Site</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #business-legend {
+          max-height: 300px;     /* 高度固定 */
+          max-width: 600px;      /* 宽度固定，超出时显示水平滚动 */
+          overflow: auto;        /* 同时支持垂直和水平滚动 */
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          background-color: #000000;
+          text-align: left;
+          font-size: 11px;
+      }
+      
+      /* 滚动条宽度 */
+      #business-legend::-webkit-scrollbar {
+          width: 6px;      /* 垂直滚动条宽度 */
+          height: 6px;     /* 水平滚动条高度 */
+      }
+      
+      /* 轨道透明 */
+      #business-legend::-webkit-scrollbar-track {
+          background: transparent;
+      }
+      
+      /* 滑块透明，悬停时才显示 */
+      #business-legend::-webkit-scrollbar-thumb {
+          background-color: transparent;
+          border-radius: 10px;
+      }
+      
+      /* 滑块悬停时显示 */
+      #business-legend::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+      }
+      </style>
+      
+
+
+  </head>
+  <body>
+
+    <header>
+      <a
+        class="second-title"
+        href="../index.html"
+        > - Haoyuan Kuang ( KONG ) - </a
+      >
+    </header>
+
+
+    <body>
+      <nav id="menu"></nav>
+      <div id='map'></div>
+      <div id='title' class="title">
+          <h1>DIFFERENT BUSINESS<br><br>ISSUED LICENSES</h1>
+          <p>
+            The following legend represents different business categories in New York City, each marked with a unique color. 
+            These categories include a diverse range of services, from retail businesses and transportation to construction and entertainment. 
+            The color-coded legend helps identify the distribution and presence of these businesses across the city. 
+         </p>
+        
+          <hr>
+  
+          <!-- 🔹 Business Category Legend -->
+          <div id="business-legend" class="legend">
+              <h4>Business Categories</h4>
+  
+              <div><span style="background-color: rgb(255, 62, 213);"></span> Bingo Game Operator</div>
+              <div><span style="background-color: rgb(117, 13, 207);"></span> Booting Company</div>
+              <div><span style="background-color: rgb(55, 162, 255);"></span> Car Wash</div>
+              <div><span style="background-color: rgb(255, 28, 164);"></span> Commercial Lessor - Bingo</div>
+              <div><span style="background-color: rgb(172, 137, 31);"></span> Construction Labor Provider</div>
+              <div><span style="background-color: rgb(57, 151, 57);"></span> Dealer In Products For The Disabled</div>
+              <div><span style="background-color: rgb(163, 89, 167);"></span> Debt Collection Agency</div>
+              <div><span style="background-color: rgb(91, 228, 255);"></span> Electronic&Home Appliance Service Dealer</div>
+              <div><span style="background-color: rgb(28, 213, 255);"></span> Electronic Cigarette Dealer</div>
+              <div><span style="background-color: rgb(28, 251, 255);"></span> Electronics Store</div>
+              <div><span style="background-color: rgb(205, 106, 7);"></span> Employment Agency</div>
+              <div><span style="background-color: rgb(255, 119, 248);"></span> Games of Chance-Bell Jar</div>
+              <div><span style="background-color: rgb(236, 95, 191);"></span> Games of Chance Vegas/Casino Nights</div>
+              <div><span style="background-color: rgb(255, 11, 190);"></span> Games of Chance-Raffle with Net > $30K</div>
+              <div><span style="background-color: rgb(255, 28, 81);"></span> Games of Chance-Raffle with Net < $30K</div>
+              <div><span style="background-color: rgb(165, 196, 196);"></span> Garage & Parking Lot</div>
+              <div><span style="background-color: rgb(255, 0, 0);"></span> General Vendor</div>
+              <div><span style="background-color: rgb(255, 206, 28);"></span> General Vendor Distributor</div>
+              <div><span style="background-color: rgb(255, 239, 115);"></span> Home Improvement Contractor</div>
+              <div><span style="background-color: rgb(255, 162, 0);"></span> Horse Drawn Cab Driver</div>
+              <div><span style="background-color: rgb(255, 157, 0);"></span> Horse Drawn Cab Owner</div>
+              <div><span style="background-color: rgb(176, 255, 28);"></span> Industrial Laundry</div>
+              <div><span style="background-color: rgb(113, 193, 0);"></span> Industrial Laundry Delivery</div>
+              <div><span style="background-color: rgb(149, 255, 28);"></span> Laundries</div>
+              <div><span style="background-color: rgb(54, 255, 145);"></span> Locksmith</div>
+              <div><span style="background-color: rgb(88, 169, 255);"></span> Newsstand</div>
+              <div><span style="background-color: rgb(90, 108, 163);"></span> Pawnbroker</div>
+              <div><span style="background-color: rgb(255, 236, 223);"></span> Pedicab Business</div>
+              <div><span style="background-color: rgb(255, 255, 255);"></span> Pedicab Driver</div>
+              <div><span style="background-color: rgb(95, 0, 142);"></span> Process Serving Agency</div>
+              <div><span style="background-color: rgb(100, 255, 203);"></span> Scale Dealer/Repairer</div>
+              <div><span style="background-color: rgb(48, 102, 122);"></span> Scrap Metal Processor</div>
+              <div><span style="background-color: rgb(7, 61, 70);"></span> Secondhand Dealer - Auto</div>
+              <div><span style="background-color: rgb(5, 69, 72);"></span> Secondhand Dealer - General</div>
+              <div><span style="background-color: rgb(154, 53, 53);"></span> Sightseeing Bus</div>
+              <div><span style="background-color: rgb(255, 255, 0);"></span> Stoop Line Stand</div>
+              <div><span style="background-color: rgb(60, 42, 91);"></span> Storage Warehouse</div>
+              <div><span style="background-color: rgb(255, 123, 28);"></span> Third Party Food Delivery Service</div>
+              <div><span style="background-color: rgb(255, 28, 225);"></span> Ticket Seller Business</div>
+              <div><span style="background-color: rgb(255, 72, 0);"></span> Tobacco Retail Dealer</div>
+              <div><span style="background-color: rgb(177, 133, 0);"></span> Tow Truck Company</div>
+              <div><span style="background-color: rgb(149, 107, 0);"></span> Tow Truck Driver</div>
+          </div>
+      </div>
+  
+      <!-- 地图 JavaScript -->
+      <script type='text/javascript' src="map.js"></script>
+
+      <p style="font-size: 15px; font-family: 'Courier New', Courier, monospace; color: #ffffff;">Check more info in This massive chaotic COLAB WORKSSSSS link
+        <br>👇HOPE IT WORKS👇
+        <br><a href="https://colab.research.google.com/drive/1KcestalP2dsljk6sHdv7luF10oEgzePU?usp=sharing" target="_blank">>>> COLAB NOTEBOOK <<<</a>
+      </p>
+
+      <p>
+        <a href="https://colab.research.google.com/drive/1KcestalP2dsljk6sHdv7luF10oEgzePU?usp=sharing" target="_blank">
+          <img
+          class="assignment-thumbnail"
+          src="./img/2.Equal Intervals mercator projection map.png"
+          alt="Thumbnail image for assignment 1" >
+          <img
+          class="assignment-thumbnail"
+          src="./img/3.PROJECTION GLOBE AND QUANTILES or EQUAL COUNT MAP.png"
+          alt="Thumbnail image for assignment 1" >
+          <img
+          class="assignment-thumbnail"
+          src="./img/4.PROJECTION CONIC CONFORNAL (Equal-Area Conic) AND NATURAL (Jenks) MAP.png"
+          alt="Thumbnail image for assignment 1" >
+        </a>
+      </p>
+  </body>
+  
+
+  <footer>
+    <p class="footer-text">
+      Send me a <a href="mailto:dd1102714218@gmail.com">message</a> or visit
+      <a href="https://dingdang-k.github.io/test-site-1/">my site</a>. |
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    </p>
+  </footer>
+  
+  </body>
+
+
+</html>
