@@ -215,6 +215,26 @@ a.second-title:visited {
     margin: auto;
   }
 
+#map1 {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+  }
+
+#map2 {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+  }
+  
+#map3 {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+  }
+
+
+
   .mapboxgl-popup-content h4 {
     font-weight: 1000;
     font-size: 2em;
@@ -276,7 +296,7 @@ a.second-title:visited {
 
 
 .title {
-	background-color: #000000;
+	background-color: #3c3c3c;
 	opacity: 80%;
 	border-radius: 1em;
 	top: 20em;
@@ -351,6 +371,7 @@ a.second-title:visited {
   opacity: 100%
   bottom: 10px;
 }
+
 .legend2 h4 {
   margin: 0 0 0px;
   opacity: 100%
