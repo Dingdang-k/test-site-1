@@ -233,6 +233,23 @@ a.second-title:visited {
     margin: auto;
   }
 
+#map11 {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+  }
+
+#map21 {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+  }
+  
+#map31 {
+    width: 100%;
+    height: 1000px;
+    margin: auto;
+  }
 
 
   .mapboxgl-popup-content h4 {
@@ -299,17 +316,18 @@ a.second-title:visited {
 	background-color: #3c3c3c;
 	opacity: 80%;
 	border-radius: 1em;
-	top: 20em;
+	top: 30em;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 	font: .6em/.7em 'Open Sans', sans-serif;
   color: rgb(255, 255, 255);
 	line-height: 2.5em;
 	padding: 2em 2em 3em;
-	position: absolute;
+	position: fixed;
 	max-width: 12%;
 	margin: 0em 5em;
 	z-index: 100;
 }
+
 
 
 .title h1{
@@ -368,7 +386,7 @@ a.second-title:visited {
   position: relative;
   right: 10px;
   z-index: 100;
-  opacity: 100%
+  opacity: 100%;
   bottom: 10px;
 }
 
